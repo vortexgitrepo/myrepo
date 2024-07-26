@@ -1,0 +1,17 @@
+name: Basic Build
+
+on:
+  push:
+    branches:
+      - '*' # This will run on any push to any branch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Print message
+        run: echo "A push event has triggered this build!"
